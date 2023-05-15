@@ -1,95 +1,418 @@
-/* @media screen and (min-width: 768px)
-   @media screen and (max-width: 768px) */
-html {
-  background-color: cadetblue;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
+@media screen and (min-width: 2000px) 
+{
+  body {
+    background-color: darkgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside1 tela_saldo aside2"
+      "aside1 forma_pagamento aside2"
+      "aside1 register_pag aside2"
+      "transacoes transacoes transacoes"
+      ". . voltar";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  
+  .tela_saldo {
+    grid-area: tela_saldo;
+    background-color: lightgray;
     display: flex;
-    background-color: cadetblue;
-    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    height: 80%;
+  }
+  
+  .forma_pagamento {
+    grid-area: forma_pagamento;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .register_pag {
+    grid-area: register_pag;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto; /* Remove a altura fixa */
+    justify-content: flex-start; /* Alinha verticalmente os itens ao início */
+    align-items: flex-start; /* Alinha verticalmente os itens ao início */
+    text-align: center;
+  }
+  
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+  
+  button {
+    background-color: gray;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+  
+  #voltar {
+    background-color: gray;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
+  }
+  
+  .transacoes-container {
+    grid-area: transacoes;
+    background-color: lightgray;
+    margin: 6%;
+    padding: 10px;
+    max-height: calc(100vh - 200px); /* Altura máxima do conteúdo (ajuste conforme necessário) */
+    overflow-y: auto; /* Adiciona uma barra de rolagem quando necessário */
+  }
+  
+  .transacoes-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .transacoes-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .transacoes-container li {
+    margin-bottom: 5px;
+  }
+  
+  #limpar {
+    grid-area: limpar;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 2000px) and (min-width: 1000px)
+{
+  body {
+    background-color: darkgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside1 tela_saldo aside2"
+      "aside1 forma_pagamento aside2"
+      "aside1 register_pag aside2"
+      "transacoes transacoes transacoes"
+      ". . voltar";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
-  .feedbacksLeft {
-    flex: 1;
-    background-color: aliceblue;
-    border: 1px solid black;
-    border-radius: 25px;
-    float: left;
+  .tela_saldo {
+    grid-area: tela_saldo;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    height: 80%;
+  }
+  
+  .forma_pagamento {
+    grid-area: forma_pagamento;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .register_pag {
+    grid-area: register_pag;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto; /* Remove a altura fixa */
+    justify-content: flex-start; /* Alinha verticalmente os itens ao início */
+    align-items: flex-start; /* Alinha verticalmente os itens ao início */
+    text-align: center;
+  }
+  
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+  
+  button {
+    background-color: gray;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+  
+  #voltar {
+    background-color: gray;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
   }
 
-  .feedbacksRight {
-    flex: 1;
-    background-color: aliceblue;
-    border: 1px solid black;
-    border-radius: 25px;
-    float: right;
+  .transacoes-container {
+    grid-area: transacoes;
+    background-color: lightgray;
+    margin: 6%;
+    padding: 10px;
+    max-height: calc(100vh - 200px); /* Altura máxima do conteúdo (ajuste conforme necessário) */
+    overflow-y: auto; /* Adiciona uma barra de rolagem quando necessário */
+  }
+  
+  .transacoes-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .transacoes-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .transacoes-container li {
+    margin-bottom: 5px;
+  }
+  
+  #limpar {
+    grid-area: limpar;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .container {
-    background-color: cadetblue;
-    margin: 30px;
+@media screen and (max-width: 1000px) 
+{
+  body {
+    background-color: darkgray;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  .tela_saldo {
+    background-color: lightgray;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .forma_pagamento {
+    background-color: lightgray;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .register_pag {
+    background-color: lightgray;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto; /* Remove a altura fixa */
+    justify-content: flex-start; /* Alinha verticalmente os itens ao início */
+    align-items: flex-start; /* Alinha verticalmente os itens ao início */
+    text-align: center;
+  }
+  
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: gray;
+  }
+  
+  aside button {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  button {
+    background-color: gray;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+  
+  #voltar {
+    background-color: gray;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
   }
 
-  .feedbacksLeft {
-    border-radius: 25px;
-    border: 1px solid black;
-    background-color: aliceblue;
+  .transacoes-container {
+    display: none;
   }
-
-  .feedbacksRight {
-    border-radius: 25px;
-    border: 1px solid black;
-    background-color: aliceblue;
+  
+  .transacoes-container h2 {
+    display: none;
   }
-}
-
-.feedbacksLeft h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
-  text-decoration: overline;
-}
-
-.modal-content h2 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
-  text-decoration: overline;
-}
-
-ul h5 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-ul p {
-  font-weight: normal;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-#form-avaliacao {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-}
-
-#feedback {
-  height: 300px;
-}
-
-.span {
-  margin: 10px;
-}
-
-.botaoENVIAR {
-  text-align: center;
-}
-
-.botaoPagInicial {
-  text-align: center;
-  margin: 30px;
+  
+  .transacoes-container ul {
+    display: none;
+  }
+  
+  .transacoes-container li {
+    display: none;
+  }
+  
+  #limpar {
+    display: none;
+  }
 }

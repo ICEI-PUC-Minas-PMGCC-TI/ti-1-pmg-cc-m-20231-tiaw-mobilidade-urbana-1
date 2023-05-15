@@ -3,151 +3,61 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BUSY</title>
+  <meta name="viewport" content="width=device-width">
+  <title>BUSY - CADASTRO DE ENTIDADE  - GABRIEL ARAUJO CAMPOS SILVA - SPRINT 2</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css"
-    integrity="sha512-jCkXgrmjV0nNyGXn+V7+rLQ2T8V7ByZnDOLNn7zavNlt9bV7vb0Jxgho6/cdU6+GcHJZU3qMKTyEg+MJS1RBAQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="script.js"></script>
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
-  <main>
-    <!--FEEDBACKS FICTICIOS-->
-    <div class="container">
-      <div class="feedbacksLeft">
+  <!--CONTAINER ONDE É EXIBIDO O SALDO-->
+  <div class="tela_saldo">
+    <p id="exib_saldo">MEU SALDO</p>
+  </div>
 
-        <h1>ALGUNS FEEDBACKS...</h1>
+   <!--CONTAINER ONDE É EXIBIDO AS FORMAS DE PAGAMENTO ( NÃO ESTÁ PRONTO E SERÁ DESENVOLVIDO NAS PRÓXIMAS SPRINTS)-->
+  <div class="forma_pagamento">
+    <nav>
+      <ul><li>CARTÃO DE CRÉDITO</li></ul>
+      <ul><li>BOLETO</li></ul>
+      <ul><li>PIX</li></ul>
+    </nav>
+  </div>
 
-        <ul>
-          <li>
-            <h5>André Menezes Moreira: <br>
-              <p>Nunca mais ando com dinheiro físico, obrigado BUSY!</p>
-            </h5>
-          </li>
+  <!--CONTAINER QUE REDIRECIONA PRA TELA DE REGISTRO DE FORMAS DE PAGAMENTO ( NÃO ESTÁ PRONTO E SERÁ DESENVOLVIDO NAS PRÓXIMAS SPRINTS)-->
+  <div class="register_pag">CADASTRAR FORMA DE PAGAMENTO</div>
 
-          <li>
-            <h5>Gláucia Caetano de Sá: <br>
-              <p>Nossa, mesmo eu que tenho dificuldade para utilizar a tecnologia consegui usar esse aplicativo. Amei!!
-              </p>
-            </h5>
-          </li>
+  <!--CONTAINER ONDE É FEITA A RETIRADA DE SALDO-->
+  <aside>
+    <header>RETIRAR SALDO</header>
+    <p>VALOR PARA RETIRAR</p>
+    <input type="text" id="ret_saldo">
+    <p>QUANTIDADE DE PASSAGENS</p>
+    <p id="passagem_ret"></p>
+    <button id="finalizar2">FINALIZAR</button>
+  </aside>
 
-          <li>
-            <h5>Jõao Carlos Pereira Elias: <br>
-              <p>Me ajuda diariamente, recomendo.</p>
-            </h5>
-          </li>
+   <!--CONTAINER ONDE É MOSTRADA O REGISTRO DAS TRANSAÇÕES FEITAS NO SITE-->
+  <div class="transacoes-container">
+    <h2>Histórico de Transações</h2>
+    <ul id="historico_transacoes"></ul>
+    <button id="limpar">Limpar Informações</button>
+  </div>
 
-          <li>
-            <h5>Arthur Soares e Sousa Pinto: <br>
-              <p>Uso sempre! Muito prático.</p>
-            </h5>
-          </li>
+   <!--CONTAINER ONDE É FEITA A INSERÇÃO DE SALDO-->
+  <aside>
+    <header>INSERIR SALDO</header>
+    <p>VALOR PARA INSERIR</p>
+    <input type="text" id="inserir_saldo">
+    <p>QUANTIDADE DE PASSAGENS</p>
+    <p id="passagem_ins"></p>
+    <button id="finalizar1">FINALIZAR</button>
+  </aside>
+  
+   <!--BOTAO PARA RETORNAR A OUTRA PAGINA(SERÁ DESENVOLVIDA NAS PROXIMAS SPRINTS)-->
+  <button id="voltar">VOLTAR</button>
 
-          <li>
-            <h5>Renata Ferreira Leão: <br>
-              <p>Já recomendei para todas minhas amigas.</p>
-            </h5>
-          </li>
+  <script src="script.js"></script>
+  </body>
 
-          <li>
-            <h5>Wilson Alexandre Soares: <br>
-              <p>Bom. Mas ainda prefiro pagar com dinheiro...</p>
-            </h5>
-          </li>
-
-          <li>
-            <h5>Andressa Cunha de Matos: <br>
-              <p>O BUSY é uma grande inovação no mercado, não sei como eu vivia sem ele!</p>
-            </h5>
-          </li>
-
-          <li>
-            <h5>Escreva você também um feedback! Veja a parte à direita da página. <br>
-            </h5>
-          </li>
-        </ul>
-
-      </div>
-      <!--FIM DO LEFT-->
-
-      <div class="feedbacksRight">
-        <!--MANDAR AVALIACAO-->
-        <div id="modal-avaliacao" class="modal">
-          <div class="modal-content">
-
-            <h2>DEIXE SEU FEEDBACK!</h2>
-
-            <form id="form-avaliacao">
-              <label for="nome">Nome completo: *</label>
-              <input type="text" id="nome" name="nome" required>
-
-              <label for="email">E-mail: *</label>
-              <input type="email" id="email" name="email" required>
-
-              <label for="feedback">Escreva seu feedback: *</label>
-              <textarea id="feedback" name="feedback" required></textarea>
-
-              <span class="span">*ITENS OBRIGATÓRIOS</span>
-
-              <button type="submit" id="BTenviarFeedback" value="ENVIAR FEEDBACK">ENVIAR</button>
-
-              <script>
-                function exibirAlerta(event) {
-                  event.preventDefault();
-                  if (document.getElementById("form-avaliacao").checkValidity()) {
-                    alert("Seu feedback foi registrado no localstorage. Ele será analisado e postado em nosso site em breve. Obrigado!");
-                  }
-                  else{
-                    alert("Informe todos os campos ou verifique se o endereço de email é válido.")}
-                  
-                  const nome = document.getElementById("nome").value;
-                  const email = document.getElementById("email").value;
-                  const feedback = document.getElementById("feedback").value;
-
-                  const dados = {
-                    nome: nome,
-                    email: email,
-                    feedback: feedback
-                  };
-
-                  const dadosString = JSON.stringify(dados);
-
-                  localStorage.setItem("dadosFormulario", dadosString);
-                }
-
-                document.getElementById("BTenviarFeedback").addEventListener("click", exibirAlerta); 
-              </script>
-
-            </form>
-
-          </div>
-        </div>
-
-        <!--BOTAO PAGINA INICIAL-->
-        <div class="botaoPagInicial">
-          <a href="_____">
-            <!--link para pagina inicial-->
-            <button type="button">VOLTAR PARA PÁGINA INICIAL<br>Disponível apenas na versão final!</button>
-
-          </a>
-        </div>
-
-        <!--FIM DO RIGHT-->
-
-      </div>
-      <!--FIM DO CONTAINER-->
-
-
-    </div>
-
-  </main>
-
-</body>
-
-</html>
+  </html>

@@ -1,0 +1,66 @@
+html {
+  background-color: cadetblue;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    background-color: cadetblue;
+    margin: 30px;
+  }
+
+  .listaRotas {
+    flex: 1;
+    float: left;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+
+  .favoritaRotas {
+    flex: 1;
+    float: right;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: cadetblue;
+    margin: 30px;
+  }
+
+  .listaRotas {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+
+  .favoritaRotas {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+}
+
+.listaRotas h1,
+.favoritaRotas h1 {
+  text-align: center;
+  text-decoration: overline;
+}
+
+.listaRotas h3,
+.favoritaRotas h3 {
+  text-align: center;
+}
+
+.listaRotas ul li,
+.favoritaRotas ul l {
+  margin: 5px;
+}
+
+.botaoPagInicial {
+  text-align: center;
+}

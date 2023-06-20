@@ -6,7 +6,6 @@ A falta de cobradores nos ônibus municipais causa diversos transtornos para mui
 
 * Arthur de Sá Braz de Matos
 * Gabriel Araújo Campos Silva
-* Gustavo Sodré de Oliveira
 * Leonardo de Freitas Viana
 * Lucca Lacerda Alkmim Resende
 
@@ -17,4 +16,4 @@ A falta de cobradores nos ônibus municipais causa diversos transtornos para mui
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+As intruções de uso encontram-se do documento em docs.

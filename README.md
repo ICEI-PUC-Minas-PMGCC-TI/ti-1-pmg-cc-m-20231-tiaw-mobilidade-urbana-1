@@ -16,4 +16,4 @@ A falta de cobradores nos ônibus municipais causa diversos transtornos para mui
 
 ## Instruções de utilização
 
-As intruções de uso encontram-se do documento em docs.
+As intruções de uso encontram-se no documento em docs.

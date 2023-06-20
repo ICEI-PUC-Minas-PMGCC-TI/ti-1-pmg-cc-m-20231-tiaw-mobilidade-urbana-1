@@ -1,5 +1,3 @@
 # Código do Projeto
 
-Mantenha neste diretório todo o código fonte do projeto. 
-
-Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código.
+No MASTER encontra-se apenas o projeto final com a documentação e os slides da apresentação. Para ver cada artefato individualmente, veja os branchs no nome de cada participante.

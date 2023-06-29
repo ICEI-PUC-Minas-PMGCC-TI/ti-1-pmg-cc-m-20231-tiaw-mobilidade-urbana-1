@@ -1,0 +1,112 @@
+/* @media screen and (min-width: 768px)
+   @media screen and (max-width: 768px) */
+html {
+  background-color: #3498db;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    background-color: #3498db;
+    margin: 30px;
+  }
+
+  .feedbacksLeft {
+    flex: 1;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 0px;
+    float: left;
+  }
+
+  .feedbacksRight {
+    flex: 1;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 0px;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    
+    margin: 30px;
+  }
+
+  .feedbacksLeft {
+    
+    border: 1px solid black;
+    background-color: aliceblue;
+  }
+
+  .feedbacksRight {
+    
+    border: 1px solid black;
+    background-color: aliceblue;
+  }
+}
+
+.feedbacksLeft h1 {
+  font-size: 35px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  text-decoration: overline;
+}
+
+.modal-content h2 {
+  font-size: 35px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  text-decoration: overline;
+}
+
+ul h5 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul p {
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-avaliacao {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#feedback {
+  height: 300px;
+}
+
+.span {
+  margin: 10px;
+}
+
+.botaoENVIAR {
+  text-align: center;
+}
+
+.voltar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voltar button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 75px;
+  width: 200px;
+}

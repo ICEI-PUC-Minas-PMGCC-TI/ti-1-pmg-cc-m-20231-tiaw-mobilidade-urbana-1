@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro Realizado</title>
+    <link rel="stylesheet" href="cadastro.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cadastro Realizado</h1>
+      <p>O seu cadastro foi realizado com sucesso!</p>
+      <p>Detalhes do cadastro:</p>
+      <ul>
+        <li><strong>Número do Cartão:</strong> <span id="cardNumber"></span></li>
+        <li><strong>Data de Expiração:</strong> <span id="expirationDate"></span></li>
+        <li><strong>CVV:</strong> <span id="cvv"></span></li>
+        <li><strong>Nome no Cartão:</strong> <span id="name"></span></li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Preenche os valores na página de confirmação
+      var params = new URLSearchParams(window.location.search);
+      document.getElementById("cardNumber").innerText = params.get("cardNumber");
+      document.getElementById("expirationDate").innerText = params.get("expirationDate");
+      document.getElementById("cvv").innerText = params.get("cvv");
+      document.getElementById("name").innerText = params.get("name");
+    </script>
+  </body>
+</html>
+
+

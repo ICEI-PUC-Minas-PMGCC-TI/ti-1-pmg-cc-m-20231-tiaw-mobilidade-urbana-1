@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cadastro de Usuário</h1>
+      <script>
+        function formatarTelefone(input) {
+          var phoneNumber = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+          var formattedPhoneNumber = "";
+
+          if (phoneNumber.length > 0) {
+            formattedPhoneNumber += "(" + phoneNumber.substring(0, 2);
+
+            if (phoneNumber.length > 2) {
+              formattedPhoneNumber += ") " + phoneNumber.substring(2);
+
+              if (phoneNumber.length > 7) {
+                formattedPhoneNumber =
+                  formattedPhoneNumber.substring(0, 9) +
+                  "-" +
+                  formattedPhoneNumber.substring(9, 14);
+              }
+            }
+          }
+
+          input.value = formattedPhoneNumber;
+        }
+
+        function validarSenha() {
+          var passwordInput = document.getElementById("password");
+          var password = passwordInput.value;
+
+          if (password.length < 8 || !/[A-Z]/.test(password) || !/\d/.test(password)) {
+            alert("A senha não é forte o suficiente. Por favor, inclua uma letra maiúscula e um número, e tenha pelo menos 8 caracteres.");
+            return false;
+          }
+
+          return true;
+        }
+      </script>
+      <form id="registrationForm" onsubmit="return redirecionarPagina() && validarSenha()">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="password-strength"></span>
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" maxlength="14" title="Digite o DDD da cidade seguido do número (ex: (31) 95568412)" oninput="formatarTelefone(this)" required>
+
+        <script>
+          var passwordInput = document.getElementById("password");
+          var passwordStrength = document.getElementById("password-strength");
+
+          passwordInput.addEventListener("input", function() {
+            var password = passwordInput.value;
+            var strengthColor = "";
+
+            if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password)) {
+              strengthColor = "green";
+              passwordStrength.textContent = "Senha forte!";
+            } else if (password.length >= 6) {
+              strengthColor = "yellow";
+              passwordStrength.textContent = "Inclua uma letra maiúscula e um número.";
+            } else {
+              strengthColor = "red";
+              passwordStrength.textContent = "A senha deve ter pelo menos 6 caracteres.";
+            }
+
+            passwordStrength.style.color = strengthColor;
+          });
+        </script>
+
+        <button type="submit" id="submitBtn">Finalizar Cadastro e fazer login</button>
+      </form>
+    </div>
+
+<footer>
+      <!--BOTAO PAGINA INICIAL-->
+      <div class="voltar">
+       <button id="voltar">VOLTAR</button>
+     </div>
+   </footer>
+    <!-- ... -->
+<script src="cadastro2.js"></script>
+</body>
+</html>
+
+  </body>
+</html>

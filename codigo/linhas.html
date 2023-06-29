@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Linhas & Favoritos</title>
+  <link href="linhas.css" rel="stylesheet" type="text/css" />
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</head>
+
+
+<body>
+
+  <!-- CONTAINER QUE DIVIDE A TELA EM 2 PARTES: ROTAS DISPONIVEIS E ROTAS FAVORITAS -->
+  <div class="container">
+
+    <!--INICIO DO CONTAINER LEFT-->
+    <div class="listaRotas">
+
+      <h1>ROTAS DISPONÍVEIS: </h1>
+
+      <div class="busca-de-linhas">
+        <input id="searchbar" onkeyup="search_linha()" type="text" name="search" placeholder="Buscar linhas">
+      </div>
+
+      <ul>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 1505 - Estação São Gabriel / São Luís
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 3503 - Estação Barreiro / Palmare</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 4032 - Estação São Gabriel / Estação
+          Barreiro</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8101 - Estação São Gabriel / Belvedere
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8203 - São Bernardo / BH Shopping</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8205 - São Bernardo / Estação Eldorado
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8207 - São Bernardo / Terminal Vilarinho
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8208 - São Bernardo / Terminal São
+          Gabriel</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 8502 - Estação Venda Nova / Estação
+          Eldorado</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9105 - Estação São Gabriel / Ribeiro de
+          Abreu</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9202 - Estação São Gabriel / Tupi</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9205 - Estação São Gabriel / Santa Amélia
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9206 - Estação São Gabriel / São José
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9250 - Estação Venda Nova / Belvedere
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9251 - Estação Venda Nova / BH Shopping
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9252 - Estação Venda Nova / Terminal São
+          Gabriel</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9404 - Estação Pampulha / Santa Amélia
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9405 - Estação Pampulha / Ribeiro de
+          Abreu</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9410 - Estação Pampulha / Buritis</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9412 - Estação Pampulha / São Gabriel
+        </li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9414 - Estação Pampulha / Tupi</li>
+        <li class="rota"><button class="favoritarBtn">FAVORITAR</button> Linha 9502 - Estação Venda Nova / Terminal
+          Barreiro</li>
+      </ul>
+
+      <h3>Mais rotas em breve!</h3>
+
+    </div>
+    <!-- FIM DO CONTAINER LEFT -->
+
+    <!-- INICIO DO CONTAINER RIGHT -->
+    <div class="favoritaRotas">
+
+      <h1>ROTAS FAVORITADAS: </h1>
+      <h3>Clique no botão "FAVORITAR" à esquerda da linha que você deseja favoritar.</h3>
+
+      <ul class="favoritadasLista">
+        <!-- As LI FAVORITADAS APARECERÃO AQUI -->
+      </ul>
+
+    </div>
+    <!--FIM DO CONTAINER RIGHT-->
+
+  </div>
+  <!--FIM DO CONTAINER (left + right)-->
+
+  <!--INICIO BOTAO PAGINA INICIAL-->
+  <div class="voltar">
+    <button id="voltar">VOLTAR</button>
+  </div>
+  <!--FIM DO BOTAO PAGINA INICIAL-->
+
+  <script src="linhas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+html {
+  background-color: #3498db;
+}
+
+.busca-de-linhas {
+  text-align: center;
+}
+
+.voltar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voltar button {
+  padding: 10px;
+  background-color: aliceblue;
+  color: #3498db;
+  border: none;
+  cursor: pointer;
+  height: 75px;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    background-color: #3498db;
+    margin: 30px;
+  }
+
+  .listaRotas {
+    flex: 1;
+    float: left;
+    background-color: aliceblue;
+    border: 1px solid black;
+  }
+
+  .favoritaRotas {
+    flex: 1;
+    float: right;
+    background-color: aliceblue;
+    border: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: #3498db;
+    margin: 30px;
+  }
+
+  .listaRotas {
+    background-color: aliceblue;
+    border: 1px solid black;
+  }
+
+  .favoritaRotas {
+    background-color: aliceblue;
+    border: 1px solid black;
+  }
+}
+
+.listaRotas h1,
+.favoritaRotas h1 {
+  text-align: center;
+  text-decoration: overline;
+}
+
+.listaRotas h3,
+.favoritaRotas h3 {
+  text-align: center;
+}
+
+.listaRotas ul li,
+.favoritaRotas ul l {
+  margin: 5px;
+}
+
+.botaoPagInicial {
+  text-align: center;
+}

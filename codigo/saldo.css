@@ -1,0 +1,440 @@
+@media screen and (min-width: 2000px) {
+  body {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside1 tela_saldo aside2"
+      "aside1 forma_pagamento aside2"
+      "aside1 register_pag aside2"
+      "transacoes transacoes transacoes"
+      ". . voltar";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .tela_saldo {
+    grid-area: tela_saldo;
+    background-color: #3498db;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    height: 80%;
+  }
+
+  .forma_pagamento {
+    grid-area: forma_pagamento;
+    background-color: #3498db;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .register_pag {
+    grid-area: register_pag;
+    background-color: #3498db;
+    color:white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: white;
+  }
+
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: white;
+  }
+
+  aside button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+
+  button {
+    background-color: white;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+
+  #voltar {
+    background-color: gray;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
+  }
+
+  .transacoes-container {
+    grid-area: transacoes;
+    background-color: lightgray;
+    margin: 6%;
+    padding: 10px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
+  .transacoes-container h2 {
+    margin-bottom: 10px;
+  }
+
+  .transacoes-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .transacoes-container li {
+    margin-bottom: 5px;
+  }
+
+  #limpar {
+    grid-area: limpar;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 2000px) and (min-width: 1000px) {
+  body {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside1 tela_saldo aside2"
+      "aside1 forma_pagamento aside2"
+      "aside1 register_pag aside2"
+      "transacoes transacoes transacoes"
+      ". . voltar";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .tela_saldo {
+    grid-area: tela_saldo;
+    background-color: #3498db;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    height: 80%;
+  }
+
+  .forma_pagamento {
+    grid-area: forma_pagamento;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .register_pag {
+    grid-area: register_pag;
+    background-color: #3498db;
+    color:white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: #3498db;
+    color:white;
+  }
+
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: #3498db;
+    color:white;
+  }
+
+  aside button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+
+  button {
+    background-color: #3498db;
+    color:white;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+    border: none;
+  }
+
+  #voltar {
+    background-color:#3498db;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
+  }
+
+  .transacoes-container {
+    grid-area: transacoes;
+    background-color: #3498db;
+    color:white;
+    margin: 6%;
+    padding: 10px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
+  .transacoes-container h2 {
+    margin-bottom: 10px;
+  }
+
+  .transacoes-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .transacoes-container li {
+    margin-bottom: 5px;
+  }
+
+  #limpar {
+    grid-area: limpar;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .tela_saldo {
+    background-color: #3498db;
+    color:white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .forma_pagamento {
+    background-color: #3498db;
+    color:white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .register_pag {
+    background-color: #3498db;
+    color:white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  aside:nth-of-type(1) {
+    grid-area: aside1;
+    margin: 10%;
+    margin-top: 7%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  aside:nth-of-type(1) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: #3498db;
+  }
+
+  aside:nth-of-type(2) {
+    grid-area: aside2;
+    margin: 10%;
+    margin-top: 7%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  aside:nth-of-type(2) header {
+    margin-left: 1%;
+    padding: 5%;
+    background-color: #3498db;
+  }
+
+  aside button {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  button {
+    background-color: #3498db;
+    justify-self: middle;
+    align-self: center;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+  }
+
+  #voltar {
+    background-color: #3498db;;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 40%;
+  }
+
+  .transacoes-container {
+    display: none;
+  }
+
+  .transacoes-container h2 {
+    display: none;
+  }
+
+  .transacoes-container ul {
+    display: none;
+  }
+
+  .transacoes-container li {
+    display: none;
+  }
+
+  #limpar {
+    display: none;
+  }
+}
+
+
+
+.register_pag{
+  background-color: red;
+}

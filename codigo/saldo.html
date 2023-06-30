@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Saldo</title>
+  <link href="saldo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!--CONTAINER ONDE É EXIBIDO O SALDO-->
+  <div class="tela_saldo">
+    <p id="exib_saldo">MEU SALDO</p>
+  </div>
+
+   <!--CONTAINER ONDE É EXIBIDO AS FORMAS DE PAGAMENTO -->
+  <div class="forma_pagamento">
+    <nav>
+      <ul><li>CARTÃO DE CRÉDITO</li></ul>
+      <ul><li>BOLETO</li></ul>
+      <ul><li>PIX</li></ul>
+    </nav>
+  </div>
+
+  <!--CONTAINER QUE REDIRECIONA PRA TELA DE REGISTRO DE FORMAS DE PAGAMENTO -->
+  <button class="register_pag" id="registro">CADASTRAR FORMA DE PAGAMENTO</button>
+
+  <!--CONTAINER ONDE É FEITA A RETIRADA DE SALDO-->
+  <aside>
+    <header>RETIRAR SALDO</header>
+    <p>VALOR PARA RETIRAR</p>
+    <input type="text" id="ret_saldo">
+    <p>QUANTIDADE DE PASSAGENS</p>
+    <p id="passagem_ret"></p>
+    <button id="finalizar2">FINALIZAR</button>
+  </aside>
+
+   <!--CONTAINER ONDE É MOSTRADA O REGISTRO DAS TRANSAÇÕES FEITAS NO SITE-->
+  <div class="transacoes-container">
+    <h2>Histórico de Transações</h2>
+    <ul id="historico_transacoes"></ul>
+    <button id="limpar">Limpar Informações</button>
+  </div>
+
+   <!--CONTAINER ONDE É FEITA A INSERÇÃO DE SALDO-->
+  <aside>
+    <header>INSERIR SALDO</header>
+    <p>VALOR PARA INSERIR</p>
+    <input type="text" id="inserir_saldo">
+    <p>QUANTIDADE DE PASSAGENS</p>
+    <p id="passagem_ins"></p>
+    <button id="finalizar1">FINALIZAR</button>
+  </aside>
+  
+   <!--BOTAO PARA RETORNAR A OUTRA PAGINA(SERÁ DESENVOLVIDA NAS PROXIMAS SPRINTS)-->
+   <div class="voltar">
+     <button>VOLTAR</button>
+   </div>
+
+  <script src="saldo.js"></script>
+  </body>
+
+  </html>

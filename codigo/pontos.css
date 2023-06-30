@@ -1,0 +1,163 @@
+
+/* style1.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .instruct {
+    background-color: #fff;
+    padding: 20px;
+    float: left;
+    width: 50%;
+  }
+  
+  .instruct p {
+    line-height: 1.5;
+  }
+  
+  .suporte {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    float: left;
+    width: 50%;
+  }
+  
+  .suporte p {
+    margin-bottom: 10px;
+  }
+  
+  .suporte input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .suporte button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .meus_pontos {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .meus_pontos p {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .conv_pontos {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .conv_pontos input {
+    width: 200px;
+    padding: 10px;
+    margin: 30px;
+    border: 1px solid #020202;
+  }
+  
+  .conv_pontos p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .conv_pontos button {
+    height: 50px;
+    width: 120px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .voltar {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .voltar button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 75px;
+    width: 200px;
+  }
+  
+  /* Responsividade */
+  
+  @media screen and (max-width: 768px) {
+    .instruct,
+    .suporte,
+    .meus_pontos,
+    .conv_pontos {
+      width: 100%;
+      float: none;
+    }
+  
+    .conv_pontos input {
+      margin: 10px;
+    }
+  
+    .conv_pontos button {
+      margin-top: 20px;
+    }
+  
+    .voltar {
+      margin-top: 20px;
+    }
+  
+    .voltar button {
+      height: 50px;
+      width: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .conv_pontos input {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .voltar button {
+      width: 100%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+ 

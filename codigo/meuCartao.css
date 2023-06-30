@@ -1,0 +1,104 @@
+body {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 25px;
+  }
+  
+  .voltar {
+    grid-column: 2;
+    border: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .voltar button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 75px;
+    width: 88%;
+  }
+  
+  .saldo {
+    grid-column: 1;
+    width: 100%;
+  }
+  
+  .saldo button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 700px;
+    width: 95%;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  
+  .cartao {
+    grid-column: 2;
+    width: 100%;
+  }
+  
+  .cartao button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 700px;
+    width: 95%;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  
+  .pontos {
+    grid-column: 3;
+  }
+  
+  .pontos button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 700px;
+    width: 100%;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  
+  .saldo button:not(.voltar):hover,
+  .cartao button:not(.voltar):hover,
+  .pontos button:not(.voltar):hover {
+    filter: brightness(80%);
+  }
+  
+  /* Layout responsivo */
+  @media only screen and (max-width: 768px) {
+    body {
+      grid-template-columns: 100%;
+      padding: 10px;
+    }
+  
+    .voltar {
+      grid-column: 1;
+    }
+  
+    .saldo,
+    .cartao,
+    .pontos {
+      grid-column: 1;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Custo-Benefício</title>
+  <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+ 	<header class="cabeçalho">
+		<h1>Calculadora de Custo-Benefício: Ônibus vs Uber</h1>
+	</header>
+  	<div class="meio">
+			<form id="calculator">
+    		<label for="distance">Distância (km):</label>
+    		<input type="number" id="distance" step="0.1" min="0.1" required>
+    
+    		<label for="bus_fare">Tarifa do ônibus (R$):</label>
+    		<input type="number" id="bus_fare" step="0.01" min="0.1" required>
+    
+    		<label for="uber_rate">Tarifa do Uber por km (R$):</label>
+    		<input type="number" id="uber_rate" step="0.01" min="0.1" required>
+    
+    		<button type="submit">Calcular</button>
+			<div id="result"></div>
+		</form>
+	</div>
+
+	<div class="voltar">
+		<button id="voltar">VOLTAR</button>
+	</div>
+  
+  <script src="calculadora.js"></script>
+  <footer>
+
+  </footer>
+</body>
+</html>

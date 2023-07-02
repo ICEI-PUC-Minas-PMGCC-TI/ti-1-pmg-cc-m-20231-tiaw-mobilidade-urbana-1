@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+  <title>BUSY - PAGINA INICIAL</title>
+
+  <link href="pag_inicial.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<!--INICIO BODY-->
+
+<body>
+
+  <!--INICIO CABECALHO-->
+  <header class="cabecalho">
+
+    <div class="logo">
+      <img src="img4.jpeg">
+    </div>
+
+    <div class="BUSY">
+      <h1>BUSY</h1>
+    </div>
+
+    <div class="header_nav">
+      <button id="login">LOGIN</button>
+      <button id="cadastro">REGISTRE-SE</button>
+      <button id="quem_somos">QUEM SOMOS</button>
+    </div>
+
+    <div class="meu_cartao">
+      <button id="meu_cartao">MEU CARTÃO</button>
+    </div>
+
+  </header>
+  <!-- FIM CABECALHO-->
+
+
+  <!--INICIO MAIN-->
+  <main>
+    <div class="container">
+
+      <!--INICIO CONTAINER_LEFT-->
+      <div class="container_LEFT">
+        <div class="carrossel">
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="https://www.em.com.br/app/noticia/gerais/2023/01/16/interna_gerais,1445393/greve-de-onibus-em-bh-e-suspensa-apos-reuniao.shtml"
+                  target="_blank">
+                  <img class="d-block w-100" src="img2.png" alt="Greve">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Greve de ônibus em BH é suspensa após reunião</h5>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <a href="https://www.otempo.com.br/politica/aparte/tarifa-zero-quer-apresentar-projeto-para-passe-livre-nos-onibus-de-bh-1.2890902"
+                  target="_blank">
+                  <img class="d-block w-100" src="img1.png" alt="Tarifa zero">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tarifa Zero quer apresentar projeto para passe livre nos ônibus de BH</h5>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <a href="https://g1.globo.com/mg/minas-gerais/noticia/2023/05/25/tarifa-de-onibus-pode-cair-para-r-450-prefeitura-de-bh-e-camara-municipal-fecham-acordo-para-reduzir-o-preco.ghtml"
+                  target="_blank">
+                  <img class="d-block w-100" src="img3.png" alt="Tarifa volta a R$4,50">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tarifa de ônibus pode voltar a R$ 4,50</h5>
+                </div>
+              </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+          <!--FIM CARROSSEL-->
+        </div>
+
+      </div>
+      <!--FIM CONTAINER_LEFT-->
+
+
+      <!--INICIO CONTAINER_RIGHT-->
+      <div class="container_RIGHT">
+        <div class="topRow">
+          <div class="linhas">
+            <button>ENCONTRAR LINHAS</button>
+          </div>
+
+          <div class="calculadora">
+            <button>CALCULADORA DE GASTOS</button>
+          </div>
+        </div>
+
+        <div class="bottomRow">
+          <div class="fale_conosco">
+            <button>FALE CONOSCO</button>
+          </div>
+
+          <div class="avaliacoes">
+            <button>AVALIAÇÕES E FEEDBACKS</button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM CONTAINER_RIGHT-->
+
+    </div>
+    <!--FIM CONTAINER-->
+
+  </main>
+
+
+<!--FIM DA MAIN E DO BODY -->
+
+
+<!--INICIO RODAPE-->
+<footer>
+  <div class="rodape">
+
+    <div class="redes_sociais">
+      <h4>Acompanhe-nos nas redes sociais!</h4>
+      <ul>
+        <li><a href=https://www.instagram.com />Instagram</a></li>
+        <li><a href=https://www.facebook.com />Facebook</a></li>
+        <li><a href=https://www.discord.com />Discord</a></li>
+        <li><a href=https://www.twitter.com />Twitter</a></li>
+      </ul>
+    </div>
+
+    <div class="politicas_privacidade">
+      <button id="politicas">POLITICAS DE PRIVACIDADE</button>
+    </div>
+
+    <div class="informacoes_gerais">
+      <button id="infos">INFORMAÇÕES GERAIS</button>
+    </div>
+
+    <div class="receba_notificacoes">
+      <form>
+        <label for="email">RECEBA NOTIFICAÇÕES!</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu email">
+        <input type="submit" value="ENVIAR">
+      </form>
+    </div>
+
+
+  </div>
+
+</footer>
+<!--FIM RODAPE-->
+  </body>
+<script src="pag_inicial.js"></script>
+
+
+</html>

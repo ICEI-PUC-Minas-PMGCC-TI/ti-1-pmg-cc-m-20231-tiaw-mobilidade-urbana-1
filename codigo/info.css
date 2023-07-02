@@ -1,0 +1,32 @@
+.titulo {
+  text-align: center;
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: overline;
+}
+
+.texto {
+  text-align: center;
+  padding: 50px;
+}
+
+html {
+  background-color: #F5F5F5;
+}
+
+.voltar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voltar button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 75px;
+  width: 200px;
+}
